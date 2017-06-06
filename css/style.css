@@ -1,0 +1,68 @@
+body
+{
+    margin: 0;
+}
+
+.slider
+{
+    max-width: 1918px;
+    height: 660px;
+    margin: 0px auto 0px auto;
+    background-image: url("../img/Mount.jpeg");
+    padding-top: 390px;
+}
+
+.transparent
+{
+    background-image: url("../img/HalfOpacytiSlider.png");
+    height: 369px;
+    position: relative;
+    padding-top: 1px; /* Відключити зхлопування маргінів */
+}
+
+.transparent > p {
+    font-size: 64.658px;
+    font-family: "Oswald";
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    text-align: center;
+    margin: 44px 0px 0px 0px;
+}
+
+.Button_BuyTheme {
+    background-color: rgb(255, 230, 0);
+    width: 230px;
+    height: 57px;
+    margin: 29px auto 0px auto;
+    padding-top: 1px; /* Відключити зхлопування маргінів */
+}
+
+.Button_BuyTheme > p
+{
+    font-size: 20px;
+    font-family: "Oswald";
+    color: rgb(19, 19, 22);
+    font-weight: bold;
+    text-align: center;
+    margin: 15px 0px 0px 0px;
+}
+
+.arrow_left
+{
+    background-image: url("../img/arrow_left.png");
+    position: absolute;
+    width: 18px;
+    height: 19px;
+    top: 193px;
+    left: 22%;
+}
+
+.arrow_right
+{
+    background-image: url("../img/arrow_right.png");
+    position: absolute;
+    width: 18px;
+    height: 19px;
+    top: 193px;
+    right: 22%;
+}
