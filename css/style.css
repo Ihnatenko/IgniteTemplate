@@ -3,11 +3,17 @@ body
     margin: 0;
 }
 
-.slider
+.global_container
 {
     max-width: 1918px;
-    height: 660px;
     margin: 0px auto 0px auto;
+}
+
+.slider
+{
+    width: 100%;
+    height: 660px;
+
     padding-top: 390px;
     position: relative;
     overflow: hidden;
@@ -84,3 +90,99 @@ body
     top: 193px;
     right: 22%;
 }
+
+.services
+{
+    width: 100%;
+    height: 1060px;
+}
+
+.services > p:first-child
+{
+    font-size: 16px;
+    font-family: "Oswald";
+    color: rgb(81, 81, 81);
+    text-align: center;
+    margin: 55px auto 0px auto;
+}
+
+.services > p:nth-child(2)
+{
+    font-size: 30px;
+    font-family: "Oswald";
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    text-align: center;
+    margin: 25px auto 0px auto;
+}
+
+.services > p:nth-child(4)
+{
+    font-size: 16px;
+    font-family: "Oswald";
+    color: rgb(112, 112, 112);
+    text-align: center;
+    width: 1150px;
+    margin: 23px auto 0px auto;
+}
+
+.services > .separator
+{
+    background-color: rgb(255, 230, 0);
+    width: 170px;
+    height: 3px;
+    margin: 24px auto 0px auto;
+}
+
+.icons
+{
+    margin-top: 67px;
+    text-align: center;
+}
+
+.service
+{
+    width: 270px;
+    margin: 0px 38px 0px 38px;
+    display: inline-block;
+}
+
+.service > p:nth-child(2)
+{
+    font-size: 20px;
+    font-family: "Oswald";
+    color: rgb(19, 19, 22);
+    font-weight: bold;
+    text-align: center;
+}
+
+.service > p:nth-child(3)
+{
+    font-size: 16px;
+    font-family: "Oswald";
+    color: rgb(112, 112, 112);
+    text-align: center;
+}
+
+.yellow_circle
+{
+    width: 110px;
+    height: 110px;
+    border-radius: 55px;
+    background-color: yellow;
+    margin: 0px auto 0px auto;
+}
+
+.yellow_circle > img
+{
+    margin: 32%;
+    width: 36%;
+    height: 36%;
+}
+
+
+
+
+
+
+
