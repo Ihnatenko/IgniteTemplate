@@ -97,26 +97,13 @@ body
     height: 1060px;
 }
 
-.services > p:first-child
+.love_to_do > .name_subblock
 {
-    font-size: 16px;
-    font-family: "Oswald";
-    color: rgb(81, 81, 81);
-    text-align: center;
-    margin: 55px auto 0px auto;
-}
-
-.services > p:nth-child(2)
-{
-    font-size: 30px;
-    font-family: "Oswald";
     color: rgb(0, 0, 0);
-    font-weight: bold;
-    text-align: center;
     margin: 25px auto 0px auto;
 }
 
-.services > p:nth-child(4)
+.love_to_do > p:nth-child(4)
 {
     font-size: 16px;
     font-family: "Oswald";
@@ -126,7 +113,7 @@ body
     margin: 23px auto 0px auto;
 }
 
-.services > .separator
+.love_to_do > .separator
 {
     background-color: rgb(255, 230, 0);
     width: 170px;
@@ -134,9 +121,9 @@ body
     margin: 24px auto 0px auto;
 }
 
-.icons
+.icons_love_to_do
 {
-    margin-top: 67px;
+    margin: 67px 0px;
     text-align: center;
 }
 
@@ -178,6 +165,99 @@ body
     margin: 32%;
     width: 36%;
     height: 36%;
+    transition: margin 1s, width 1s, height 1s;
+}
+
+.yellow_circle > img:hover
+{
+    margin: 25%;
+    width: 50%;
+    height: 50%;
+}
+
+.do_it
+{
+    background-color: rgb(19, 19, 22);
+    border-top: 1px solid rgb(19, 19, 22);
+    padding-bottom: 73px;
+}
+
+.do_it > .name_subblock
+{
+    color: rgb(255, 230, 0);
+    margin-top: 65px;
+}
+
+.name_block
+{
+    font-size: 16px;
+    font-family: "Oswald";
+    color: rgb(81, 81, 81);
+    text-align: center;
+    margin: 55px auto 0px auto;
+}
+
+.name_subblock
+{
+    font-size: 30px;
+    font-family: "Oswald";
+    font-weight: bold;
+    text-align: center;
+}
+
+.do_it > p:nth-child(2)
+{
+    font-size: 16px;
+    font-family: "Oswald";
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+
+.icons_do_it
+{
+    text-align: center;
+    margin-top: 50px;
+}
+
+.icons_do_it > .works
+{
+    display: inline-block;
+    width: 160px;
+    margin: 0px 35px;
+}
+
+.icons_do_it > .works > p:nth-child(2)
+{
+    margin: 15px auto 0px auto;
+    font-size: 20px;
+    font-family: "Oswald";
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    text-align: center;
+}
+
+.icons_do_it > .works > p:nth-child(3)
+{
+    font-size: 16px;
+    font-family: "Oswald";
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+
+.icons_do_it > .works  > img
+{
+    transition: height 1s, width 1s, margin 1s;
+    margin: 13px;
+    height: 45px;
+    width: 45px;
+    text-align: center;
+}
+
+.icons_do_it > .works  > img:hover
+{
+    margin: 0px;
+    height: 58px;
+    width: 58px;
 }
 
 
