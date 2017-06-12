@@ -94,7 +94,6 @@ body
 .services
 {
     width: 100%;
-    height: 1060px;
 }
 
 .love_to_do > .name_subblock
@@ -103,17 +102,17 @@ body
     margin: 25px auto 0px auto;
 }
 
-.love_to_do > p:nth-child(4)
+.description_block
 {
     font-size: 16px;
     font-family: "Oswald";
     color: rgb(112, 112, 112);
     text-align: center;
-    width: 1150px;
+    max-width: 1150px;
     margin: 23px auto 0px auto;
 }
 
-.love_to_do > .separator
+.separator
 {
     background-color: rgb(255, 230, 0);
     width: 170px;
@@ -156,7 +155,7 @@ body
     width: 110px;
     height: 110px;
     border-radius: 55px;
-    background-color: yellow;
+    background-color: #ffe600;
     margin: 0px auto 0px auto;
 }
 
@@ -244,22 +243,109 @@ body
     text-align: center;
 }
 
-.icons_do_it > .works  > img
+.icons_do_it > .works   img
 {
     transition: height 1s, width 1s, margin 1s;
-    margin: 13px;
+    margin: 6px;
     height: 45px;
     width: 45px;
     text-align: center;
 }
 
-.icons_do_it > .works  > img:hover
+.icons_do_it > .works   img:hover
 {
     margin: 0px;
-    height: 58px;
-    width: 58px;
+    height: 57px;
+    width: 57px;
 }
 
+.container_icon
+{
+	width: 57px;
+	height: 57px;
+	margin: 0px auto;	
+}
+
+.photo_menu 
+{
+	text-align: center; 
+}
+
+.photo_menu ul
+{
+	display: inline-block;
+}
+
+.photo_menu  li
+{
+	float: left;
+	cursor: pointer;
+	list-style-type: square;
+	margin-right: 30px;
+	color: #ffe600;
+}
+
+.photo_menu  li:first-child
+{
+	list-style-type: none;
+}
+
+.photo_menu  li > a:hover
+{
+	color: #ffe600;
+}
+
+.photo_menu  li > a
+{
+	color: #5e5e5e;
+}
+
+.photos
+{
+	font-size: 0px;
+}
+
+.photo 
+{
+	width: 200px;
+	height: 200px;
+	margin: 0px;
+	position: relative;	
+	font-size: 20px;
+	color: white;
+	vertical-align: top;
+	
+	display: inline-flex;
+	flex-direction: column; 
+	justify-content: center;
+	align-items: center;
+}
+
+.photo  p
+{
+	display: none;
+	margin: 0px;
+}
+
+.yellow_phon 
+{
+	width: 100%;
+	height: 100%;
+	opacity: 0.5;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+
+.yellow_phon:hover
+{
+	background-color: #ffe600;
+}
+
+.photo:hover  p
+{
+	display: block;
+}
 
 
 
