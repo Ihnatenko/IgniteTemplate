@@ -307,8 +307,47 @@ body
 
 .container_photo
 {
-	width: 20%;
 	display: inline-block;
+}
+
+@media screen and (min-width: 1600px)
+{
+	.container_photo
+	{
+		width: 20%;
+	}
+}
+	
+@media screen and (min-width: 1300px) and (max-width: 1600px) 
+{
+	.container_photo
+	{
+		width: 25%;
+	}
+}
+	
+@media screen and (min-width: 1000px) and (max-width: 1300px) 
+{
+	.container_photo
+	{
+		width: 33%;
+	}
+}
+	
+@media screen and (min-width: 300px) and (max-width: 1000px) 
+{
+	.container_photo
+	{
+		width: 50%;
+	}
+}
+
+@media screen and (max-width: 500px) 
+{
+	.container_photo
+	{
+		width: 100%;
+	}
 }
 
 .photo 
@@ -322,6 +361,8 @@ body
 	vertical-align: top;
 	padding-top: 50%;
 	padding-bottom: 50%;
+	background-position: center center;
+	background-size: cover;
 	
 /* 	display: inline-flex;
 	flex-direction: column; 
@@ -335,7 +376,7 @@ body
 	display: none;
 	margin: 0px auto;
 	position: absolute;
-	left: 30%;
+	/* left: 30%; */
 }
 
 .yellow_phon 
@@ -351,6 +392,19 @@ body
 .yellow_phon:hover
 {
 	background-color: #ffe600;
+}
+
+.container_text
+{
+	width: 100%;
+	height: 100%;
+	top: 0px;
+	position: absolute;
+	display: flex;
+	flex-direction: column; 
+	justify-content: center;
+	align-items: center;
+	
 }
 
 .photo:hover  p

@@ -173,7 +173,8 @@ function recreateGalery(category_photo)
 
 		for(var j = 0; j < numbers_photos[category_photo]; j++)
 		{
-			createNewPhoto(photo, photo_parent, items_menu[category_photo], j);
+			//createNewPhoto(photo, photo_parent, items_menu[category_photo], j);
+			createNewPhoto(photo, photo_parent, items_menu[category_photo], categorys_photos[category_photo], j);
 		}
 }
 
@@ -199,16 +200,16 @@ galeryMenu.onclick = function(event)
 			case "ALL": 
 				recreateGaleryAll();
 				break;			
-			case item_menu[0]: 
+			case items_menu[0]: 
 				recreateGalery(0);
 				break;			
-			case item_menu[1]: 
+			case items_menu[1]: 
 				recreateGalery(1);
 				break;			
-			case item_menu[2]: 
+			case items_menu[2]: 
 				recreateGalery(2);
 				break;
-			case item_menu[3]: 
+			case items_menu[3]: 
 				recreateGalery(3);
 				break;
 		}
