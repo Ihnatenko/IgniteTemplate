@@ -412,6 +412,89 @@ body
 	display: block;
 }
 
+.yellow_square {
+    background-color: rgb(255, 230, 0);
+    width: 60px;
+    height: 60px;
+    margin: 64px auto 66px auto;
+    text-align: center;
+    display: flex;
+}
+
+.yellow_square img
+{
+    margin: auto;
+}
+
+.Button_Contact_Us
+{
+    background-color: rgb(255, 230, 0);
+    width: 171px;
+    height: 58px;
+    margin: 61px auto 73px auto;
+    display: flex;
+}
+
+.Button_Contact_Us p
+{
+    font-size: 15px;
+    color: white;
+    font-family: "Oswald";
+    font-weight: bold;
+    text-align: center;
+    margin: auto;
+}
+
+.statistic
+{
+    background-color: rgb(19, 19, 22);
+    border-top: 1px solid rgb(19, 19, 22);
+    text-align: center;
+}
+
+.indicator
+{
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(255, 230, 0);
+    background-color: rgba(19, 19, 22);
+    width: 272px;
+    height: 145px;
+    display: inline-flex;
+    margin: 60px 32px;
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    vertical-align: top;
+}
+
+.statistic .name_subblock
+{
+    color: white;
+    margin-top: 64px;
+}
+
+.stat_number
+{
+    font-size: 40px;
+    font-family: "Oswald";
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    margin: 0;
+    /*text-align: center;*/
+}
+
+.name_inicator
+{
+    font-size: 16px;
+    font-family: "Oswald";
+    color: rgb(255, 230, 0);
+    margin: 0;
+}
+
+
 
 
 
