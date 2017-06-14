@@ -136,29 +136,29 @@ function delete_image()
 
 var numbers_photos = [3, 3, 4, 3];
 var categorys_photos = ["WebDesign", "GraphicDesign", "Photography", "Illustration"];
-var item_menu = ["WEB DESIGN", "GRAPHIC DESIGN", "PHOTOGRAPHY", "ILLUSTRATION"];
+var items_menu = ["WEB DESIGN", "GRAPHIC DESIGN", "PHOTOGRAPHY", "ILLUSTRATION"];
 
 recreateGaleryAll();
 
-function createNewPhoto(photo, photo_parent, category_photo, number_photo)
+function createNewPhoto(photo, photo_parent, item_menu, category_photo, number_photo)
 {
 	var photo_next = photo.cloneNode(true);
-	photo_next.style.backgroundImage = "url(img/What_we_done_so_far/" + category_photo + "/" + number_photo + ".jpg";
+	photo_next.querySelector(".photo").style.backgroundImage = "url(img/What_we_done_so_far/" + category_photo + "/" + number_photo + ".jpg";
 	photo_next.querySelector(".name_photo").innerText = "IMAGE" + number_photo;
-	photo_next.querySelector(".category_photo").innerText = category_photo;
+	photo_next.querySelector(".category_photo").innerText = item_menu;
 	photo_parent.appendChild(photo_next);
 }
 
 function recreateGaleryAll()
 {
-	var photo = document.querySelector(".photo");
+	var photo = document.querySelector(".container_photo");
 	var photo_parent = photo.parentNode;
 	deleteGalery();
 	for(var i = 0; i < 4; i++)
 	{
 		for(var j = 0; j < numbers_photos[i]; j++)
 		{
-			createNewPhoto(photo, photo_parent, categorys_photos[i], j);
+			createNewPhoto(photo, photo_parent, items_menu[i], categorys_photos[i], j);
 		}
 	}
 	
@@ -167,19 +167,19 @@ function recreateGaleryAll()
 
 function recreateGalery(category_photo)
 {
-	var photo = document.querySelector(".photo");
+	var photo = document.querySelector(".container_photo");
 	var photo_parent = photo.parentNode;
 	deleteGalery();
 
 		for(var j = 0; j < numbers_photos[category_photo]; j++)
 		{
-			createNewPhoto(photo, photo_parent, categorys_photos[category_photo], j);
+			createNewPhoto(photo, photo_parent, items_menu[category_photo], j);
 		}
 }
 
 function deleteGalery()
 {
-	var photos = document.querySelectorAll(".photo");
+	var photos = document.querySelectorAll(".container_photo");
 	for (var i = 0; i < photos.length; i++) {
         photos[i].remove();
     }

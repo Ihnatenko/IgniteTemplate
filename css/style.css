@@ -305,26 +305,37 @@ body
 	font-size: 0px;
 }
 
+.container_photo
+{
+	width: 20%;
+	display: inline-block;
+}
+
 .photo 
 {
-	width: 200px;
-	height: 200px;
+/* 	width: 20%;
+	height: 200px; */
 	margin: 0px;
 	position: relative;	
 	font-size: 20px;
 	color: white;
 	vertical-align: top;
+	padding-top: 50%;
+	padding-bottom: 50%;
 	
-	display: inline-flex;
+/* 	display: inline-flex;
 	flex-direction: column; 
 	justify-content: center;
-	align-items: center;
+	align-items: center; */
+	
 }
 
 .photo  p
 {
 	display: none;
-	margin: 0px;
+	margin: 0px auto;
+	position: absolute;
+	left: 30%;
 }
 
 .yellow_phon 
