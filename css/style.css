@@ -375,7 +375,7 @@ body
 {
 	display: none;
 	margin: 0px auto;
-	position: absolute;
+	/* position: absolute; */
 	/* left: 30%; */
 }
 
