@@ -40,10 +40,23 @@ arrow_left.onclick = arrow_right.onclick = function(){
     })
 }();
 
+window.onscroll = function()
+{
+	var elemTop = document.querySelector(".stat_number").getBoundingClientRect().top;
+	if(elemTop < document.documentElement.clientHeight)
+	{
+		runNumber(document.querySelector(".stat_number"), 0, 1600, 1000, 5);
+		runNumber(document.querySelectorAll(".stat_number")[1], 0, 3200, 1000, 10);
+		runNumber(document.querySelectorAll(".stat_number")[2], 0, 40, 1000, 1);
+		runNumber(document.querySelectorAll(".stat_number")[3], 0, 20000, 1000, 100);
+		window.onscroll = null;
+	}
+	
+}	
+
 
 function start_sliding()
 {
-
     if(!timerId && !timeoutId)
     {
         timeoutId = setTimeout(function()
@@ -215,18 +228,6 @@ galeryMenu.onclick = function(event)
 		}
 		event.target.style.color = "#ffe600";
 	}
-	
-window.onscroll = function()
-{
-	var elemTop = document.querySelector(".stat_number").getBoundingClientRect().top;
-	if(elemTop < document.documentElement.clientHeight)
-	{
-		runNumber(document.querySelector(".stat_number"), 0, 1600, 1000, 5);
-		runNumber(document.querySelectorAll(".stat_number")[1], 0, 3200, 1000, 10);
-		runNumber(document.querySelectorAll(".stat_number")[2], 0, 40, 1000, 1);
-		runNumber(document.querySelectorAll(".stat_number")[3], 0, 20000, 1000, 100);
-	}
-}	
 	
 function runNumber(elem, startNum, endNum, time, step)
 {
