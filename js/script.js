@@ -297,6 +297,28 @@ function runNumber(elem, startNum, endNum, time, step)
 
 
 
+			var elem = document.querySelector(".button");
+			elem.onclick = function(){
+				var cir = document.querySelector(".half");
+				cir.style.transform = "rotate(360deg)";
+				setTimeout(function(){
+					document.querySelectorAll(".laler_top")[0].style.opacity = 0;
+					document.querySelector(".half").style.zIndex = 4;
+				}, 1875);				
+				setTimeout(function(){
+					document.querySelectorAll(".laler_top")[1].style.opacity = 0;
+					document.querySelector(".half").style.zIndex = 6;
+				}, 3125);				
+				setTimeout(function(){
+					document.querySelectorAll(".laler_top")[2].style.opacity = 0;
+				}, 4375);				
+				setTimeout(function(){
+					document.querySelectorAll(".laler_top")[3].style.opacity = 0;
+				}, 5000);
+			}
+
+
+
 
 
 
