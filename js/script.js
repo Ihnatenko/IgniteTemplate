@@ -1,5 +1,15 @@
 var arrow_right = document.querySelector(".arrow_right");
 var arrow_left = document.querySelector(".arrow_left");
+var xicon = document.querySelector(".xicon");
+var workers_photo = document.querySelectorAll(".worker_photo");
+var team = document.querySelector(".team");
+
+
+var workers_name = ["JOHN DOE 0", "JOHN DOE 1", "JOHN DOE 2", "JOHN DOE 3"];
+var workers_description = ["Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Vivamus suscipit tortor eget felis porttitor volutpat. Curabitur aliquet quam id dui posuere blandit. Nulla porttitor accumsan tincidunt. Cras ultricies ligula sed magna dictum porta. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Mauris blandit aliquet elit, eget tincidunt ni dictum porta.", 
+						   "Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Vivamus suscipit tortor eget felis porttitor volutpat. Curabitur aliquet quam id dui posuere blandit. Nulla porttitor accumsan tincidunt. Cras ultricies ligula sed magna dictum porta. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Mauris blandit aliquet elit, eget tincidunt ni dictum porta.", 
+						   "Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Vivamus suscipit tortor eget felis porttitor volutpat. Curabitur aliquet quam id dui posuere blandit. Nulla porttitor accumsan tincidunt. Cras ultricies ligula sed magna dictum porta. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Mauris blandit aliquet elit, eget tincidunt ni dictum porta.", 
+						   "Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Vivamus suscipit tortor eget felis porttitor volutpat. Curabitur aliquet quam id dui posuere blandit. Nulla porttitor accumsan tincidunt. Cras ultricies ligula sed magna dictum porta. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Mauris blandit aliquet elit, eget tincidunt ni dictum porta."];
 
 var i = 0;
 var slider_text = document.querySelector(".transparent > p");
@@ -16,11 +26,23 @@ var timerId = false;
 var timeoutId = false;
 
 start_sliding();
+showInfoWorker();
 
+xicon.onclick = function(){
+	
+	var about_woker = document.querySelector(".about_woker");
+	about_woker.style.display = "none";
+	
+	var pointers_to_worker = document.querySelectorAll(".pointer_to_worker");
+	for(var i = 0; i < pointers_to_worker.length; i++)
+	{
+		pointers_to_worker[i].style.display = "none";
+	}
+	
+}
 
-arrow_left.onclick = arrow_right.onclick = function(){
-
-
+arrow_left.onclick = arrow_right.onclick = function()
+{
     return(function() {
 
         if(timerId)
@@ -52,7 +74,37 @@ window.onscroll = function()
 		window.onscroll = null;
 	}
 	
+	return(true);
 }	
+
+team.onclick = function(event)
+{
+	if(event.target.classList == "worker_photo")	
+	{
+		var workers_photo = document.querySelectorAll(".pointer_to_worker");
+		for(var i = 0; i < workers_photo.length; i++)
+		{
+			workers_photo[i].style.display = "none";
+		}
+		var target_pointer = event.target.parentNode.querySelector(".pointer_to_worker");
+		document.querySelector(".about_woker").style.display = "block";
+		target_pointer.style.display = "block";
+		console.log(event.target.parentNode.classList[1]);
+		document.querySelectorAll(".about_woker p")[0].innerText = workers_name[event.target.parentNode.classList[1]];
+		document.querySelectorAll(".about_woker p")[1].innerText = workers_description[event.target.parentNode.classList[1]];
+	}
+}
+
+function showInfoWorker()
+{
+	var pointers_to_woker = document.querySelectorAll(".pointer_to_worker");
+	for(var i = 1; i < pointers_to_woker.length; i++)
+	{
+		pointers_to_woker[i].style.display = "none";
+	}
+	
+	return(true);
+}
 
 
 function start_sliding()
