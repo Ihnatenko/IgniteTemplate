@@ -62,7 +62,30 @@ arrow_left.onclick = arrow_right.onclick = function()
     })
 }();
 
-window.onscroll = function()
+window.addEventListener(onscroll, onscroleHundler);
+console.log(window);
+	
+	// var elemTop = document.querySelector(".item_skils span").getBoundingClientRect().top;
+	// if(elemTop < document.documentElement.clientHeight)
+	// {
+		// var circles = document.querySelectorAll(".circle_line");
+		// startDownloadCircle(circles[0], 360*0.9);
+		// startDownloadCircle(circles[1], 360*0.96);
+		// startDownloadCircle(circles[2], 360*0.85);
+		// startDownloadCircle(circles[3], 360*0.94);
+		
+		// var spans = document.querySelectorAll(".circle_line span");
+		// runNumber(spans[0], 0, 90, 5000, 1);
+		// runNumber(spans[1], 0, 96, 5000, 1);
+		// runNumber(spans[2], 0, 85, 5000, 1);
+		// runNumber(spans[3], 0, 94, 5000, 1);
+	// }
+	// startDownloadCircle
+	
+	// return(true);
+// }
+
+function onscroleHundler()
 {
 	var elemTop = document.querySelector(".stat_number").getBoundingClientRect().top;
 	if(elemTop < document.documentElement.clientHeight)
@@ -71,7 +94,7 @@ window.onscroll = function()
 		runNumber(document.querySelectorAll(".stat_number")[1], 0, 3200, 1000, 10);
 		runNumber(document.querySelectorAll(".stat_number")[2], 0, 40, 1000, 1);
 		runNumber(document.querySelectorAll(".stat_number")[3], 0, 20000, 1000, 100);
-		window.onscroll = null;
+		// window.onscroll = null;
 	}
 	
 	return(true);
@@ -295,27 +318,18 @@ function runNumber(elem, startNum, endNum, time, step)
             }, interval);
 }
 
-
-
-			var elem = document.querySelector(".button");
-			elem.onclick = function(){
-				var cir = document.querySelector(".half");
-				cir.style.transform = "rotate(360deg)";
-				setTimeout(function(){
-					document.querySelectorAll(".laler_top")[0].style.opacity = 0;
-					document.querySelector(".half").style.zIndex = 4;
-				}, 1875);				
-				setTimeout(function(){
-					document.querySelectorAll(".laler_top")[1].style.opacity = 0;
-					document.querySelector(".half").style.zIndex = 6;
-				}, 3125);				
-				setTimeout(function(){
-					document.querySelectorAll(".laler_top")[2].style.opacity = 0;
-				}, 4375);				
-				setTimeout(function(){
-					document.querySelectorAll(".laler_top")[3].style.opacity = 0;
-				}, 5000);
-			}
+function startDownloadCircle(elem, grad){
+	var cir = elem.querySelector(".half");
+	cir.style.transform = "rotate(" + grad  + "deg)";
+	setTimeout(function(){
+		elem.querySelectorAll(".laler_top")[0].style.opacity = 0;
+		elem.querySelector(".half").style.zIndex = 4;
+	}, 1875);				
+	setTimeout(function(){
+		elem.querySelectorAll(".laler_top")[1].style.opacity = 0;
+		elem.querySelector(".half").style.zIndex = 6;
+	}, 3125);				
+}
 
 
 
