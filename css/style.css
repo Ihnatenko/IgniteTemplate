@@ -185,11 +185,6 @@ body
     padding-bottom: 73px;
 }
 
-.do_it > .name_subblock
-{
-    
-}
-
 .name_block
 {
     font-size: 16px;
@@ -789,7 +784,16 @@ body
   text-align: center;
 }
 
+.client_slider
+{
+	text-align: center;
+	vertical-align: middle;
+}
 
+.client_logo
+{
+	display: inline-block;
+}
 
 
 
