@@ -27,6 +27,7 @@ var timeoutId = false;
 
 start_sliding();
 showInfoWorker();
+startClientSlider();
 
 xicon.onclick = function(){
 	
@@ -320,7 +321,8 @@ function runNumber(elem, startNum, endNum, time, step)
             }, interval);
 }
 
-function startDownloadCircle(elem, grad){
+function startDownloadCircle(elem, grad)
+{
 	var cir = elem.querySelector(".half");
 	cir.style.transform = "rotate(" + grad  + "deg)";
 	setTimeout(function(){
@@ -331,6 +333,30 @@ function startDownloadCircle(elem, grad){
 		elem.querySelectorAll(".laler_top")[1].style.opacity = 0;
 		elem.querySelector(".half").style.zIndex = 6;
 	}, 3125);				
+}
+
+function startClientSlider()
+{
+	var clients = document.querySelector(".client_slider");
+	
+	setInterval(function(){
+		clients.appendChild(clients.firstElementChild.cloneNode(true));
+		var marginStr = window.getComputedStyle(clients.firstElementChild).width;
+		clients.style.transition = "margin-left 3s linear 0s";
+		clients.style.marginLeft = "-" + (30 + Number(marginStr.substr(0, marginStr.indexOf("px"))) + "px");
+		console.log("-" + (30 + Number(marginStr.substr(0, marginStr.indexOf("px")))) + "px");
+		console.log(clients.style.marginLeft);
+		setTimeout(function(){
+			clients.style.transition = "";
+			clients.removeChild(clients.firstElementChild);
+			clients.style.marginLeft = "0px";
+			
+			return(true);
+		}, 5000);
+		
+		return(true);
+	}, 10000);
+	
 }
 
 

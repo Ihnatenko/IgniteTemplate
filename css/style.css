@@ -784,15 +784,33 @@ body
   text-align: center;
 }
 
+.test_container
+{
+	margin-left: 100px;
+}
+
 .client_slider
 {
-	text-align: center;
+	text-align: left;
+	/* border: 1px solid black; */
 	vertical-align: middle;
+	/* max-width: 1900px; */
+	overflow: hidden;
+	/* transition: margin-left 0.1s linear 0s; */
 }
 
 .client_logo
 {
 	display: inline-block;
+	margin: 0px 3%;
+	margin-left: 0px;
+	overflow: hidden;
+	width: 18%;
+}
+
+.client_logo img
+{
+	width: 100%;
 }
 
 
