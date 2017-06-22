@@ -784,12 +784,14 @@ body
   text-align: center;
 }
 
-.test_container
+.static_client_container
 {
-	margin-left: 100px;
+	overflow: hidden;
+	width: 70%;
+	margin: 0 auto;
 }
 
-.client_slider
+.shifted_client_slider
 {
 	text-align: left;
 	/* border: 1px solid black; */
@@ -797,15 +799,15 @@ body
 	/* max-width: 1900px; */
 	overflow: hidden;
 	/* transition: margin-left 0.1s linear 0s; */
+	font-size: 0px;
+	width: 238%;
 }
 
 .client_logo
 {
 	display: inline-block;
-	margin: 0px 3%;
-	margin-left: 0px;
-	overflow: hidden;
-	width: 18%;
+	margin: 0px 1%;
+	width: 5%;
 }
 
 .client_logo img

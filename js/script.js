@@ -337,25 +337,25 @@ function startDownloadCircle(elem, grad)
 
 function startClientSlider()
 {
-	var clients = document.querySelector(".client_slider");
+	var clients = document.querySelector(".shifted_client_slider");
 	
 	setInterval(function(){
 		clients.appendChild(clients.firstElementChild.cloneNode(true));
 		var marginStr = window.getComputedStyle(clients.firstElementChild).width;
-		clients.style.transition = "margin-left 3s linear 0s";
-		clients.style.marginLeft = "-" + (30 + Number(marginStr.substr(0, marginStr.indexOf("px"))) + "px");
-		console.log("-" + (30 + Number(marginStr.substr(0, marginStr.indexOf("px")))) + "px");
-		console.log(clients.style.marginLeft);
+		clients.style.transition = "margin-left 0.5s linear 0s";
+		clients.style.marginLeft = "-" + (1.4*Number(marginStr.substr(0, marginStr.indexOf("px"))) + "px");
+		// console.log("-" + (30 + Number(marginStr.substr(0, marginStr.indexOf("px")))) + "px");
+		// console.log(clients.style.marginLeft);
 		setTimeout(function(){
 			clients.style.transition = "";
 			clients.removeChild(clients.firstElementChild);
 			clients.style.marginLeft = "0px";
 			
 			return(true);
-		}, 5000);
+		}, 750);
 		
 		return(true);
-	}, 10000);
+	}, 1500);
 	
 }
 
