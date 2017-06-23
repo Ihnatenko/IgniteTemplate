@@ -3,6 +3,7 @@ var arrow_left = document.querySelector(".arrow_left");
 var xicon = document.querySelector(".xicon");
 var workers_photo = document.querySelectorAll(".worker_photo");
 var team = document.querySelector(".team");
+var navigation_rewiew = document.querySelector(".navigation_rewiew");
 
 
 var workers_name = ["JOHN DOE 0", "JOHN DOE 1", "JOHN DOE 2", "JOHN DOE 3"];
@@ -65,6 +66,30 @@ arrow_left.onclick = arrow_right.onclick = function()
 
 window.addEventListener("scroll", onscrollStatistics);
 window.addEventListener("scroll", onscrollSkils);
+
+navigation_rewiew.onclick = chengeRewievHundler;
+
+function chengeRewievHundler(event)
+{
+	if(event.target.tagName != "LI")
+	{
+		return(true);
+	}
+	
+	var lis = this.querySelectorAll("li");
+	for(var i = 0; i < lis.length; i++)
+	{
+		lis[i].style.backgroundColor = "white";
+	}
+	
+	var num_rewiev = [].indexOf.call(lis, event.target);
+	lis[num_rewiev].style.backgroundColor = "yellow";
+	
+	var reviews_text = document.querySelector(".reviews_text");
+	reviews_text.style.marginLeft = "-" + num_rewiev*600 + "px";
+	
+	return(true);
+}
 
 
 function onscrollSkils()

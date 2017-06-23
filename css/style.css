@@ -788,14 +788,13 @@ body
 {
 	overflow: hidden;
 	width: 70%;
-	margin: 0 auto;
+	margin: 95px auto 59px auto;;
 }
 
 .shifted_client_slider
 {
 	text-align: left;
 	/* border: 1px solid black; */
-	vertical-align: middle;
 	/* max-width: 1900px; */
 	overflow: hidden;
 	/* transition: margin-left 0.1s linear 0s; */
@@ -808,12 +807,100 @@ body
 	display: inline-block;
 	margin: 0px 1%;
 	width: 5%;
+	vertical-align: top;
 }
 
 .client_logo img
 {
 	width: 100%;
 }
+
+.squeres_container
+{
+	text-align: center;
+	margin: 75px auto 62px auto;
+	
+}
+
+.squeres_container .square_clients
+{
+	display: inline-flex;
+	margin: 0 16px;
+	width: 33px;
+	height: 33px;
+}
+
+.squeres_container .square_clients img
+{
+	width: 40%;
+}
+
+.reviews 
+{
+	background-color: rgb(8, 49, 56);
+	padding-top: 1px;
+	font-size: 0px;
+}
+
+.review
+{
+  font-size: 20px;
+  font-family: "Oswald";
+  color: rgb(255, 255, 255);
+  text-align: center;
+  width: 600px;
+  display: inline-block;
+}
+
+.reviews_window
+{
+	margin: 70px auto 0;
+	width: 600px;
+	overflow: hidden;
+}
+
+.reviews_text
+{
+	width: 2500px;
+	margin-left: 0px;
+	transition: margin-left 1s linear 0s;
+}
+
+.review_autor
+{
+  font-size: 20px;
+  font-family: "Oswald";
+  color: rgb(255, 255, 255);
+  text-align: center;
+  margin: 20px auto 0;
+}
+
+.navigation_rewiew
+{
+	display: block;
+	margin: 20px auto 70px;
+	text-align: center;
+}
+
+.navigation_rewiew > li
+{
+	width: 6px;
+	height: 6px;
+	display: inline-block;
+	background-color: white;
+	margin: 0px 12px;
+}
+
+.navigation_rewiew > li:first-child
+{
+	background-color: yellow;
+}
+
+
+
+
+
+
 
 
 
