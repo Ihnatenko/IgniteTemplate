@@ -705,7 +705,7 @@ body
 	width: 100%;
 	height: 100%;
 	top: 0;
-	background-image: url("img/transparant.png");
+	/* background-image: url("img/transparant.png"); */
 	transition: transform 5s linear 0s;
 	z-index: 2;
 }
@@ -839,6 +839,7 @@ body
 {
 	background-color: rgb(8, 49, 56);
 	padding-top: 1px;
+	padding-bottom: 1px;
 	font-size: 0px;
 }
 
@@ -878,8 +879,9 @@ body
 .navigation_rewiew
 {
 	display: block;
-	margin: 20px auto 70px;
+	margin: 20px auto 70px auto;
 	text-align: center;
+	padding: 0px;
 }
 
 .navigation_rewiew > li
@@ -896,16 +898,123 @@ body
 	background-color: yellow;
 }
 
+.container_contacts
+{
+	margin: 70px auto 60px;
+	text-align: center;
+}
 
+.contact
+{
+	display: inline-block;
+	text-align: center;
+	margin: 0 110px;
+}
 
+.name_contact
+{
+	margin-top: 25px;
 
+	font-size: 20px;
+	font-family: "Oswald";
+	color: rgb(19, 19, 22);	
+}
 
+.data_contact
+{
+	margin-top: 30px;
 
+	font-size: 20px;
+	font-family: "Oswald";
+	color: rgb(81, 81, 81);
+}
 
+.send_message
+{
+	background-color: #222222;
+	border: 1px solid #222222;
+}
 
+.send_message form
+{
+	margin: 50px auto;
+	text-align: center;
+	font-size: 0px;
+	max-width: 1170px;
+	display: flex;
+	
+	flex-direction: row; 
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+}
 
+.send_message input
+{
+	background-color: transparent;
+	border: 1px solid white;
+	display: inline-block;
+	width: 31%;
+	height: 20px;
+	font-size: 15px;
+	font-family: "Oswald";
+	text-align: left;
+	padding: 20px;
+	color: #ffffff;
+	
+	-moz-box-sizing: border-box; /* Для Firefox */  
+    box-sizing: border-box; /* Ширина блока с полями */
+}
 
+.send_message textarea
+{
+	width: 100%;
+	margin-top: 32px;
+	height: 180px;
+	padding: 20px;
+	vertical-align: top;
+	
+	
+	background-color: transparent;
+	border: 1px solid white;
+	font-size: 15px;
+	font-family: "Oswald";
+	text-align: left;
+	padding: 20px;
+	color: #ffffff;
+}
 
+.Button_Send_Message
+{
+	color: black;
+	background-color: rgb(255, 230, 0);
+    width: 171px;
+    height: 58px;
+    margin: 61px auto 73px auto;
+    display: flex;
+}
 
+.Button_Send_Message p
+{
+    font-size: 15px;
+    color: black;
+    font-family: "Oswald";
+    font-weight: bold;
+    text-align: center;
+    margin: auto;
+}
 
+.footer
+{
+	background-color: black;
+	height: 300px;
+	padding-top: 1px;
+}
 
+.footer p
+{
+	text-align: center;
+	color: white;
+	font-family: "Oswald";
+	
+}
