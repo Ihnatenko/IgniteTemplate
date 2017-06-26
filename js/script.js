@@ -69,6 +69,29 @@ window.addEventListener("scroll", onscrollSkils);
 
 navigation_rewiew.onclick = chengeRewievHundler;
 
+document.querySelectorAll("input")[1].oninput = checkMailHundler;
+
+function checkMailHundler(event)
+{
+	var regexp = [	/^[a-zA-Z]$/,
+					/^([a-z0-9_\.-]+)@([a-z0-9_\.-]+)\.([a-z\.]{2,6})$/,
+					/^[a-zA-Z0-9]$/];
+	var inputs = document.querySelectorAll("input");
+	var indexTarget = [].indexOf.call(inputs, event.target);
+	if(indexTarget == -1)
+	{
+		return(true);
+	}
+	var target = inputs[indexTarget];
+
+	if(target.value.search(regexp))
+	{
+		target.style.outlineColor = "red";
+		target.style.borderColor = "red";
+	}
+	return(true);
+}
+
 function chengeRewievHundler(event)
 {
 	if(event.target.tagName != "LI")
