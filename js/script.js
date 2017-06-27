@@ -69,13 +69,13 @@ window.addEventListener("scroll", onscrollSkils);
 
 navigation_rewiew.onclick = chengeRewievHundler;
 
-document.querySelectorAll("input")[1].oninput = checkMailHundler;
+document.querySelector("form").oninput = checkMailHundler;
 
 function checkMailHundler(event)
 {
-	var regexp = [	/^[a-zA-Z]$/,
+	var regexp = [	/^[a-zA-Z]+$/,
 					/^([a-z0-9_\.-]+)@([a-z0-9_\.-]+)\.([a-z\.]{2,6})$/,
-					/^[a-zA-Z0-9]$/];
+					/^[a-zA-Z0-9]+$/];
 	var inputs = document.querySelectorAll("input");
 	var indexTarget = [].indexOf.call(inputs, event.target);
 	if(indexTarget == -1)
@@ -84,11 +84,15 @@ function checkMailHundler(event)
 	}
 	var target = inputs[indexTarget];
 
-	if(target.value.search(regexp))
+	if(target.value.search(regexp[indexTarget]))
 	{
 		target.style.outlineColor = "red";
 		target.style.borderColor = "red";
+	} else {
+		target.style.outlineColor = "#00ff00";
+	    target.style.borderColor = "#00ff00";
 	}
+	
 	return(true);
 }
 

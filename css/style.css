@@ -26,6 +26,7 @@ body
 {
     max-width: 1918px;
     margin: 0px auto 0px auto;
+	position: relative;
 }
 
 .slider
@@ -926,7 +927,7 @@ body
 {
 	margin: 70px auto 60px;
 	text-align: center;
-	display: inline-flex;
+	display: flex;
 	flex-direction: row;
     justify-content: center;
     align-items: center;
@@ -1060,4 +1061,74 @@ a
 {
 	text-decoration: none;
 }
+
+.menu
+{
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100px;
+	width: 100%;
+	display: flex;
+		flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.menu_bg 
+{
+	background-color: rgb(19, 19, 22);
+	opacity: 0.302;
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	z-index: -1;
+}
+
+.menu img
+{
+/* 	margin-left: 20%;
+	margin-top: 15px; */
+	display: block;
+}
+
+.menu .photo_menu
+{
+/* 	position: absolute;
+	right: 20%;
+	top: 20px; */
+	display: block;
+}
+
+.menu .photo_menu li a
+{
+	color: white;
+}
+
+
+
+@media screen and (max-width: 700px) 
+{
+	.menu
+	{
+		height: 150px;
+		top: 0;
+	}
+	
+	.menu .photo_menu li
+	{
+		float: none;
+	}
+	
+	.photo_menu  li:first-child
+	{
+		list-style-type: square;
+	}
+	
+	.menu .photo_menu li
+	{
+		/* font-size: 10px; */
+	}
+}
+
 
