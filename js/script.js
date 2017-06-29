@@ -26,7 +26,7 @@ var slider_text_arr = [
 var timerId = false;
 var timeoutId = false;
 
-start_sliding();
+// start_sliding();
 showInfoWorker();
 startClientSlider();
 
@@ -45,6 +45,12 @@ xicon.onclick = function(){
 
 arrow_left.onclick = arrow_right.onclick = function()
 {
+	var slider_text = document.querySelector(".bg_image_container");
+	slider_text.style.marginLeft = "-100%";
+}
+
+function  hed()
+{
     return(function() {
 
         if(timerId)
@@ -62,7 +68,7 @@ arrow_left.onclick = arrow_right.onclick = function()
         }
         return(true);
     })
-}();
+};
 
 window.addEventListener("scroll", onscrollStatistics);
 window.addEventListener("scroll", onscrollSkils);
