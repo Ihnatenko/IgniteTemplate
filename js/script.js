@@ -43,10 +43,55 @@ xicon.onclick = function(){
 	
 }
 
-arrow_left.onclick = arrow_right.onclick = function()
+var slider_animation = {};
+slider_animation.widht = 1;
+slider_animation.index = 0;
+
+
+ arrow_left.onclick = arrow_right.onclick = hed
+// arrow_right.onclick = function()
+// {
+	
+	// var slider_container = document.querySelector(".bg_image_container");
+	// slider_container.appendChild(slider_container.firstElementChild.cloneNode(true));
+	// slider_container.style.transition = "left 1s linear 0s";
+	// slider_animation.widht += 1;
+	// slider_animation.index += 1;
+	// slider_container.style.left = "-" + slider_animation.index*100 + "%";
+	// slider_container.style.width = (slider_animation.index+1)*100 + "%"
+	
+// }
+
+arrow_left.onclick = function()
 {
-	var slider_text = document.querySelector(".bg_image_container");
-	slider_text.style.marginLeft = "-100%";
+	
+	var slider_container = document.querySelector(".bg_image_container");
+	var slider = document.querySelector(".bg_image");
+	var a = slider.cloneNode(true);
+	a.style.backgroundImage = "url('img/Mount_1.jpeg')";
+	slider_container.insertBefore(a, slider);
+	slider_container.style.transition = "right 1s linear 0s";
+	slider_container.style.right= "-100%";
+}
+
+document.querySelector(".bg_image_container").addEventListener("transitionend", deleteBgImageHundler, true);
+
+function deleteBgImageHundler()
+{
+	var sliders = document.querySelectorAll(".bg_image");
+	var slider_container = document.querySelector(".bg_image_container");
+	for(var i = 0; i < sliders.length; i++)
+	{
+		if(slider_animation.index != i)
+		{
+			sliders[i].remove();
+		}
+	}
+	slider_container.style.transition = "";
+	slider_container.style.left = "0";
+	slider_container.style.right = "0";
+	slider_animation.index = 0;
+	return(true);
 }
 
 function  hed()
