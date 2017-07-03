@@ -1068,7 +1068,7 @@ a
 	top: 0;
 	left: 0;
 	height: 100px;
-	max-width: 1918px;
+	width: 100%;
 	display: flex;
 	flex-direction: row;
     justify-content: space-around;
