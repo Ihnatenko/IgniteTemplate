@@ -1068,9 +1068,9 @@ a
 	top: 0;
 	left: 0;
 	height: 100px;
-	width: 100%;
+	max-width: 1918px;
 	display: flex;
-		flex-direction: row;
+	flex-direction: row;
     justify-content: space-around;
     align-items: center;
 }
