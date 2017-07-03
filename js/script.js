@@ -242,10 +242,11 @@ function make_arrow_right() {
     bg_image_2.style.backgroundImage = "url(img/" + mount_image_arr[i] + ")";
     bg_image.parentNode.insertBefore(bg_image_2, bg_image);
     bg_image_2.style.left = "100%";
-    setTimeout(function() {
+    bg_image.style.left = "0%";
+     setTimeout(function() {
         bg_image_2.style.left = "0";
         bg_image.style.left = "-100%";
-    }, 0);
+     }, 50);
 
     change_text();
     delete_image();
@@ -396,8 +397,6 @@ function startClientSlider()
 		var marginStr = window.getComputedStyle(clients.firstElementChild).width;
 		clients.style.transition = "margin-left 0.5s linear 0s";
 		clients.style.marginLeft = "-" + (1.4*Number(marginStr.substr(0, marginStr.indexOf("px"))) + "px");
-		// console.log("-" + (30 + Number(marginStr.substr(0, marginStr.indexOf("px")))) + "px");
-		// console.log(clients.style.marginLeft);
 		setTimeout(function(){
 			clients.style.transition = "";
 			clients.removeChild(clients.firstElementChild);
